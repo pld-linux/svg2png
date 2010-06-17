@@ -8,6 +8,8 @@ Group:		Applications/Graphics
 Source0:	http://cairographics.org/snapshots/%{name}-%{version}.tar.gz
 # Source0-md5:	ba266c00486ffd93b8a46d59028aaef9
 URL:		http://cairographics.org/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	libsvg-cairo-devel >= 0.1.6
 BuildRequires:	pkgconfig
 Requires:	libsvg-cairo >= 0.1.6
@@ -23,6 +25,9 @@ Narzędzie do tworzenia obrazków PNG z SVG przy użyciu cairo.
 %setup -q
 
 %build
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
@@ -38,5 +43,5 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING ChangeLog NEWS README
-%attr(755,root,root) %{_bindir}/*
-%{_mandir}/man1/*
+%attr(755,root,root) %{_bindir}/svg2png
+%{_mandir}/man1/svg2png.1*
