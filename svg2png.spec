@@ -2,7 +2,7 @@ Summary:	svg2png - render an SVG image to a PNG image (using cairo)
 Summary(pl.UTF-8):	svg2png - tworzenie obrazków PNG z SVG przy użyciu cairo
 Name:		svg2png
 Version:	0.1.3
-Release:	2
+Release:	3
 License:	BSD-like
 Group:		Applications/Graphics
 Source0:	http://cairographics.org/snapshots/%{name}-%{version}.tar.gz
